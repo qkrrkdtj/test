@@ -33,8 +33,8 @@ int main(void){
     double sin_theta = clip((F_avail/SF - C*mg) / mg, 0, 1);
 
     double theta_rad = asin(sin_theta);
-    double theta_deg = theta_rad * 180.0 / 3.14;
-    double grade_pct = tan(theta_deg) * 100;
+    double theta_deg = theta_rad * 180.0 / M_PI;
+    double grade_pct = tan(theta_rad) * 100;
 
     printf("-------------------------\n");
     printf("총 구동 토크 T_tot: %.2lf N*m\n", T_tot);
