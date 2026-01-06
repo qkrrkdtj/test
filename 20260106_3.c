@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(void) {
     char ani[20];
@@ -7,7 +8,6 @@ int main(void) {
     printf("좋아하는 동물: ");
     scanf("%s", ani);
     // getchar();
-    scanf("%*s");
     printf("좋아하는 이유: ");
     fgets(why, sizeof(why), stdin);
     printf("%s is %s", ani, why);
