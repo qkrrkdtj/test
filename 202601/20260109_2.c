@@ -2,20 +2,23 @@
 #include <math.h>
 
 int main(void) {
-    char s[10];
-    int b;
-    int sum = 0;
+    int n;
+    int k;
 
-    scanf("%s%d", s, &b);
-
-    for(int i=0; s[i]!='\0'; i++) {
-        if(s[i]>='A' && s[i]<='Z')
-            sum=sum+(s[i]-'A'+10)*pow(b, i);
-        else
-            sum=sum+(s[i]-'0')*pow(b, i);
+    scanf("%d", &n);
+    int j=0;
+    for(int i=0; i<=n; i++) {
+        if(j==0) {
+            j = i+1 + i+1;
+            k=pow(j, 2);
+        }
+        else {
+            j = j + j-1;
+            k = pow(j, 2);
+        }
     }
 
-    printf("%d", sum);
+    printf("%d", k);
 
     return 0;
 }
