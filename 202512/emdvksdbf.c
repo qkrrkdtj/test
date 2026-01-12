@@ -1,10 +1,8 @@
-#include <stdio.h>
-#define _USE_MATH_DEFINES
-#include <math.h>
+#include "calc.h"
 
 int clip(int x, int min, int max);
 
-int main(void){
+void emdvksdbf(void){
     double m, T_m, g, r, SF, eta, C;
     int N_m;
 

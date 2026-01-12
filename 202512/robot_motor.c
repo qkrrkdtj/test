@@ -1,6 +1,6 @@
-#include <stdio.h>
+#include "calc.h"
 
-int main(void){
+void robot_motor(void){
     double mass, SF, margin, radius, torque, gear;
     int wheels;
 
@@ -15,7 +15,7 @@ int main(void){
     scanf("%d", &wheels);
     printf("안전계수: ");
     scanf("%lf", &SF);
-    printf("설계마진(20% == 1.2): ");
+    printf("설계마진(20%% == 1.2): ");
     scanf("%lf", &margin);
 
     // 모터 정보
@@ -35,9 +35,4 @@ int main(void){
 
     if ( Fmin <= Fmotor ) printf("판정: 만족");
     else printf("판정: 불만족");
-
-
-
-
-    return 0;
 }

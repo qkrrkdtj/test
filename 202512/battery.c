@@ -1,6 +1,6 @@
-#include <stdio.h>
+#include "calc.h"
 
-int main(void){
+void battery(void){
     double I_load, vel, R, V, C, eta;
     int wheels;
 
@@ -21,7 +21,7 @@ int main(void){
     scanf("%lf", &V);
     printf("용량[Ah]: ");
     scanf("%lf", &C);
-    printf("시스템 효율 [0~1, 90% = 0.9]: ");
+    printf("시스템 효율 [0~1, 90%% = 0.9]: ");
     scanf("%lf", &eta);
 
     double E_usable = V * C * eta * ( 1 - R );
